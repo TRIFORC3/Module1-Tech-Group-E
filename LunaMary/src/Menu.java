@@ -2,48 +2,40 @@ import java.util.Scanner;
 
 
 class Menu {
-
+    Scanner teclado = new Scanner(System.in);
+    String nombre;
+    String edad;
+    String sexo;
+    Persona persona;
+    MenuPreguntas menuPreguntas;
 
     public Menu() {
+        menuPreguntas = new MenuPreguntas();
     }
 
 
-    public void mostrarMenu() {
-        Scanner teclado = new Scanner(System.in);
-        System.out.println("Eres Casado?");
-        System.out.println("1.- SI");
-        System.out.println("2.- NO");
-        System.out.println("Ingrese una opcion");
-        String opcionA = teclado.nextLine();
+    public void mostrarPreguntas() {
 
-        switch (opcionA) {
-            case "1":
-
-                System.out.println("Cuantos hijos tienes");
-                System.out.println("1.- 1 Hijo");
-                System.out.println("2.- 2 Hijos");
-                System.out.println("3.- Mas de 2 Hijos");
-                System.out.println("Ingrese una opcion");
-                String opcion1A = teclado.nextLine();
-
-                switch (opcion1A) {
-
-                    case "1":
-                        System.out.println("Aqui termina");
-                        break;
-
-
-                }
-
-
-            case "2":
-                System.out.println("Tienes Novia o Pareja");
-                System.out.println("1.- SI");
-                System.out.println("2.- NO");
-                System.out.println("Ingrese una opcion");
-                String opcionB = teclado.nextLine();
-
-        }
+        menuPreguntas.mostrarP1();
+        menuPreguntas.mostrarP2();
+        menuPreguntas.mostrarP3();
     }
+
+    public void registrarPersona() {
+
+        System.out.println("Para iniciar el test responde las siguientes preguntas");
+        System.out.println("Ingresa tu nombre completo ?");
+        nombre = teclado.nextLine();
+        System.out.println("¡Hola " + nombre + "!");
+        System.out.println("Ingresa tu edad?");
+        edad = teclado.nextLine();
+        System.out.println("Ingresa tu sexo  F  o  M ?");
+        sexo = teclado.nextLine();
+        System.out.println("Gracias! " + nombre + "Ahora sí... ¡haz el test y descubre cómo eres en realidad! Y si te sorprende el resultado... ");
+        persona = new Persona(nombre, edad, sexo);
+//        persona.mostrarDatos();
+
+    }
+
 }
 
