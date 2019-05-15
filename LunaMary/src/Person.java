@@ -5,12 +5,7 @@ public class Person {
     private Integer edad;
     private String sexo;
 
-    public Person(String nombre,
-                  Integer edad,
-                  String sexo) {
-        this.nombre = nombre;
-        this.edad = edad;
-        this.sexo = sexo;
+    public Person() {
 
     }
 
@@ -40,7 +35,7 @@ public class Person {
 
     public void showDataPerson() {
         System.out.println(nombre);
-        System.out.println(edad);
+//        System.out.println(edad);
         System.out.println(sexo);
     }
 

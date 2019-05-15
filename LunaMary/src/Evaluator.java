@@ -18,5 +18,22 @@ public class Evaluator {
     }
 
 
+    public void evaluate(Integer points) {
+        switch (points) {
+            case 10:
+                System.out.println("EXTROVERTIDO");
+                break;
+            case 20:
+                System.out.println("AGRADABLE");
+                break;
+            case 30:
+                System.out.println("CONCIENTIZADOR");
+                break;
+            case 40:
+                System.out.println("ABIERTO");
+                break;
+        }
 
+
+    }
 }

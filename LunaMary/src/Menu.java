@@ -3,38 +3,48 @@ import java.util.Scanner;
 
 class Menu {
     Scanner teclado = new Scanner(System.in);
-    private  String nombre;
+    private String nombre;
     private Integer edad;
     private String sexo;
-    Person persona;
-    AskMenu menuPreguntas;
+    Person person;
+    Evaluator evaluator;
+    AskMenu askMenu;
 
     public Menu() {
-        menuPreguntas = new AskMenu();
+        askMenu = new AskMenu();
     }
 
 
     public void showAsks() {
 
-        menuPreguntas.mostrarP1();
-        menuPreguntas.mostrarP2();
-        menuPreguntas.mostrarP3();
+        askMenu.mostrarP1();
+        askMenu.mostrarP2();
+        askMenu.mostrarP3();
+        askMenu.mostrarP4();
+        askMenu.mostrarP5();
+        evaluator = new Evaluator();
+        evaluator.evaluate(askMenu.calculate());
+
     }
 
     public void registerPerson() {
 
         System.out.println("Para iniciar el test responde las siguientes preguntas");
-        System.out.println("Ingresa tu nombre completo ?");
+        System.out.println("Ingresa tu nombre completo? ");
         nombre = teclado.nextLine();
         System.out.println("¡Hola " + nombre + "!");
-        System.out.println("Ingresa tu edad?");
-        edad = Integer.parseInt (teclado.nextLine());
-        System.out.println("Ingresa tu sexo  F  o  M ?");
+        System.out.println("Ingresa tu edad? ");
+        edad = teclado.nextInt();
+        System.out.println("Ingresa tu sexo  F  o  M ? ");
         sexo = teclado.nextLine();
+        person = new Person();
+        person.setNamePerson(nombre);
+        person.setAgePerson(edad);
+        person.setSexPerson(sexo);
+        person.showDataPerson();
+
         System.out.println("Gracias! " + nombre + "Ahora sí... ¡haz el test y descubre cómo eres en realidad! Y si te sorprende el resultado... ");
-        persona.setNamePerson(nombre);
-        persona.setAgePerson(edad);
-        persona.setSexPerson(sexo);
+        System.out.println("*********************");
 
 
     }
