@@ -1,9 +1,9 @@
 public class Person {
 
 
-    String nombre;
-    Integer edad;
-    String sexo;
+    private String nombre;
+    private Integer edad;
+    private String sexo;
 
     public Person(String nombre,
                   Integer edad,
@@ -14,36 +14,35 @@ public class Person {
 
     }
 
-    public String getNombre() {
+    public String retrieveNamePerson() {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
+    public void setNamePerson(String nombre) {
         this.nombre = nombre;
     }
 
-    public Integer getEdad() {
+    public Integer getAgePerson() {
         return edad;
     }
 
-    public void setEdad(Integer edad) {
+    public void setAgePerson(Integer edad) {
         this.edad = edad;
     }
 
-    public String getSexo() {
+    public String retrieveSexerson() {
         return sexo;
     }
 
-    public void setSexo(String sexo) {
+    public void setSexPerson(String sexo) {
         this.sexo = sexo;
     }
 
-    public void mostrarDatos() {
+    public void showDataPerson() {
         System.out.println(nombre);
         System.out.println(edad);
         System.out.println(sexo);
     }
-
 
 
 }

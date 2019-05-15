@@ -6,8 +6,8 @@ public class Main {
     public static void main(String[] args) {
 
         Menu menu = new Menu();
-        menu.registrarPersona();
-        menu.mostrarPreguntas();
+        menu.registerPerson();
+        menu.showAsks();
 
 
     }

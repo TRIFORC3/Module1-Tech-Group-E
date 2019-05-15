@@ -14,14 +14,14 @@ class Menu {
     }
 
 
-    public void mostrarPreguntas() {
+    public void showAsks() {
 
         menuPreguntas.mostrarP1();
         menuPreguntas.mostrarP2();
         menuPreguntas.mostrarP3();
     }
 
-    public void registrarPersona() {
+    public void registerPerson() {
 
         System.out.println("Para iniciar el test responde las siguientes preguntas");
         System.out.println("Ingresa tu nombre completo ?");
@@ -32,9 +32,9 @@ class Menu {
         System.out.println("Ingresa tu sexo  F  o  M ?");
         sexo = teclado.nextLine();
         System.out.println("Gracias! " + nombre + "Ahora sí... ¡haz el test y descubre cómo eres en realidad! Y si te sorprende el resultado... ");
-        persona.setNombre(nombre);
-        persona.setEdad(edad);
-        persona.setSexo(sexo);
+        persona.setNamePerson(nombre);
+        persona.setAgePerson(edad);
+        persona.setSexPerson(sexo);
 
 
     }
