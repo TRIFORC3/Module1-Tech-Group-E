@@ -1,13 +1,13 @@
-public class Persona {
+public class Person {
 
 
     String nombre;
-    String edad;
+    Integer edad;
     String sexo;
 
-    public Persona(String nombre,
-                   String edad,
-                   String sexo) {
+    public Person(String nombre,
+                  Integer edad,
+                  String sexo) {
         this.nombre = nombre;
         this.edad = edad;
         this.sexo = sexo;
@@ -22,11 +22,11 @@ public class Persona {
         this.nombre = nombre;
     }
 
-    public String getEdad() {
+    public Integer getEdad() {
         return edad;
     }
 
-    public void setEdad(String edad) {
+    public void setEdad(Integer edad) {
         this.edad = edad;
     }
 
@@ -43,5 +43,7 @@ public class Persona {
         System.out.println(edad);
         System.out.println(sexo);
     }
+
+
 
 }

@@ -1,19 +1,16 @@
 import java.util.Scanner;
 
 
-class MenuPreguntas {
+class AskMenu {
     Scanner teclado = new Scanner(System.in);
-    String nombre;
-    String edad;
-    String sexo;
-    Persona persona;
+    Person persona;
     String opcionP1;
     String opcionP2;
     String opcionP3;
     String opcionP4;
     String opcionP5;
 
-    public MenuPreguntas() {
+    public AskMenu() {
     }
 
 

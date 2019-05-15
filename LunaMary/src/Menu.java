@@ -3,14 +3,14 @@ import java.util.Scanner;
 
 class Menu {
     Scanner teclado = new Scanner(System.in);
-    String nombre;
-    String edad;
-    String sexo;
-    Persona persona;
-    MenuPreguntas menuPreguntas;
+    private  String nombre;
+    private Integer edad;
+    private String sexo;
+    Person persona;
+    AskMenu menuPreguntas;
 
     public Menu() {
-        menuPreguntas = new MenuPreguntas();
+        menuPreguntas = new AskMenu();
     }
 
 
@@ -28,12 +28,14 @@ class Menu {
         nombre = teclado.nextLine();
         System.out.println("¡Hola " + nombre + "!");
         System.out.println("Ingresa tu edad?");
-        edad = teclado.nextLine();
+        edad = Integer.parseInt (teclado.nextLine());
         System.out.println("Ingresa tu sexo  F  o  M ?");
         sexo = teclado.nextLine();
         System.out.println("Gracias! " + nombre + "Ahora sí... ¡haz el test y descubre cómo eres en realidad! Y si te sorprende el resultado... ");
-        persona = new Persona(nombre, edad, sexo);
-//        persona.mostrarDatos();
+        persona.setNombre(nombre);
+        persona.setEdad(edad);
+        persona.setSexo(sexo);
+
 
     }
 
